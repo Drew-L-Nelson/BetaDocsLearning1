@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import { useState } from 'react';
+import FilterableProductTable from './FilterableProductTable';
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -15,6 +16,7 @@ export default function App() {
   return (
     <div>
       <h1>Components</h1>
+      <FilterableProductTable/>
     </div>
   );
 }
