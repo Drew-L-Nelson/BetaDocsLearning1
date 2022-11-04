@@ -10,7 +10,7 @@ export default function SearchBar() {
           placeholder='Search'
           className='search-bar'
           aria-label='Search'
-          style={{ width: "500px" }}
+          style={{ width: "300px" }}
         />
       </Form>
     </>
