@@ -1,7 +1,16 @@
 import React from 'react';
-import './ProductTable.css'
+import './style.css';
+import ProductCategoryRow from './ProductCategoryRow';
 
 export default function ProductTable() {
+  const rows = [];
+  let lastCategory = null;
+
+
+
+
+
+
   return (
     <table>
       <thead>

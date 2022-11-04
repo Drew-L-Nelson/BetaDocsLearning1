@@ -16,7 +16,7 @@ export default function App() {
   return (
     <div>
       <h1>Components</h1>
-      <FilterableProductTable/>
+      <FilterableProductTable products={PRODUCTS}/>
     </div>
   );
 }
