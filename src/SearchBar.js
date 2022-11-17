@@ -3,12 +3,13 @@ import './style.css';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
-export default function SearchBar() {
+export default function SearchBar({ filterText, inStockOnly }) {
   return (
     <>
       <Form className='search-bar-form'>
         <Form.Control
           type='search'
+          value={filterText}
           placeholder='Search'
           className='search-bar'
           aria-label='Search'
