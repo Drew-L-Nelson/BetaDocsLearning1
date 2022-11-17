@@ -3,11 +3,21 @@ import './style.css';
 import ProductCategoryRow from './ProductCategoryRow';
 import ProductRow from './ProductRow'
 
-export default function ProductTable({ products }) {
+export default function ProductTable({ products, filterText, inStockOnly }) {
   const rows = [];
   let lastCategory = null;
 
   products.forEach((p) => {
+    if (
+      p.name.toLowerCase().indexOf(
+        filterText.toLowerCase()
+      ) === -1
+    ) {
+      return;
+    }
+    if (inStockOnly && !p.stocked) {
+      return;
+    }
     if (p.category !== lastCategory) {
       rows.push(
         <ProductCategoryRow 
